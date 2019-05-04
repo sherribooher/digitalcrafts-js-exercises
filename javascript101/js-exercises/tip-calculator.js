@@ -13,3 +13,4 @@ function tipAmount(billTotal, service) {
 }
 
 console.log(tipAmount(100, "good"));
+console.log(tipAmount(40, "fair"));
