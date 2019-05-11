@@ -1,22 +1,22 @@
 // Write a function printBox which is given a width and height and prints a hollow box of given dimensions.
 
 function printBox(width, height) {
-  var x, y;
-  for (y = 0; y <= height - 1; y++) {
-    if (y == 3) {
-      console.log("*".repeat(width));
-    }
-    if (x == width && y == 1) {
-      console.log("*");
-    }
-    for (x = 0; x <= width - 1; x++) {
-      if (x == 0 && y == 0) {
-        console.log("*".repeat(width)); // first line prints x number of stars
+  // column = width
+  // row = height
+  for (var row = 1; row <= height; row++) {
+    var rowString = "";
+    for (var column = 1; column <= width; column++) {
+      if (row == 1 || row == height) {
+        rowString += "*";
+      } else {
+        if (column == 1 || column == width) {
+          rowString += "*";
+        } else {
+          rowString += " ";
+        }
       }
-      if (x == 0 && y == 1) {
-        console.log("*");
-      }
     }
+    console.log(rowString);
   }
 }
 
